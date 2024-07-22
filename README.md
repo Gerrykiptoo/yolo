@@ -13,7 +13,7 @@ npm
 
  # Setup Instructions
 
- Navigate to the Client Folder
+# Navigate to the Client Folder
 
  cd client
 
@@ -25,8 +25,26 @@ npm install
 
 npm start
 
+# Navigate to the Backend Folder
+# Open a new terminal to be safer and run the following commands:
 
+cd ../backend
 
+# Install Backend Dependencies
+
+npm install
+
+# Start the Backend Application
+
+npm start
+
+# Running the Application
+The application will be available at:
+
+  Frontend: http://localhost:3000
+  Backend: http://localhost:5000
+
+  
 
 
  
