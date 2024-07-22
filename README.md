@@ -52,3 +52,24 @@ The application will be available at:
 
   
 
+# Running with Docker
+
+# Build the Docker images:
+
+sudo docker compose build
+
+# Start the containers:
+ 
+sudo docker compose up
+ 
+ # Push the Docker images to Docker Hub:
+
+docker login
+
+docker tag frontend-img:v1.0.0 gerrykiptoo/frontend:v1.0.0
+
+docker tag backend-img:v1.0.0 gerrykiptoo/backend:v1.0.0
+
+docker push gerrykiptoo/frontend:v1.0.0
+
+docker push gerrykiptoo/backend:v1.0.0
