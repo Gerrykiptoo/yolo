@@ -11,7 +11,21 @@ npm
 
  [MongoDB]("https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/") and start the MongoDB service with "sudo service mongod start"
 
- 
+ # Setup Instructions
+
+ Navigate to the Client Folder
+
+ cd client
+
+# Install Dependencies
+
+npm install
+
+# Start the Client Application
+
+npm start
+
+
 
 
 
