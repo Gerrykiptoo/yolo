@@ -5,11 +5,17 @@ This project is an e-commerce application developed with Node.js, Express API, a
 
 Make sure that you have the following installed:
 
-[Node.js] through this link (https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04)
 
-npm 
+- [Node.js](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04)
 
- [MongoDB]("https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/") and start the MongoDB service with "sudo service mongod start"
+- npm
+
+- [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/) and start the MongoDB service with `sudo service mongod start`
+
+- [Docker](https://docs.docker.com/get-docker/)
+
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
 
  # Setup Instructions
 
@@ -45,7 +51,4 @@ The application will be available at:
   Backend: http://localhost:5000
 
   
-
-
- 
 
