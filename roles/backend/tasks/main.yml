@@ -19,13 +19,20 @@
     group: docker
     append: yes
 
-- name: Build and start backend Docker container
+- name: Build backend Docker image
+  docker_image:
+    name: "{{ backend_image }}"
+    build:
+      path: "{{ playbook_dir }}/../../backend"
+    state: present
+
+- name: Run backend Docker container
   docker_container:
     name: backend-container
-    image: backend-img:v1.0.0
+    image: "{{ backend_image }}"
     state: started
     ports:
-      - "5000:5000"
+      - "{{ backend_port }}:5000"
     networks:
       - name: Gerrys_network
   register: container_result
