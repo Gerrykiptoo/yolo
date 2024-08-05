@@ -1,0 +1,31 @@
+---
+- name: Install Docker and Docker Compose
+  apt:
+    name:
+      - docker.io
+      - docker-compose
+    state: present
+    update_cache: yes
+
+- name: Start and enable Docker service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
+
+- name: Add vagrant user to docker group
+  user:
+    name: vagrant
+    group: docker
+    append: yes
+
+- name: Build and start frontend Docker container
+  docker_container:
+    name: frontend-container
+    image: gerrykiptoo/frontend:v1.0.0
+    state: started
+    restart_policy: always
+    ports:
+      - "3000:3000"
+    networks:
+      - Gerrys_network

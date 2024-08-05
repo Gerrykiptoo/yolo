@@ -1,0 +1,8 @@
+---
+- name: Provision Docker Containers
+  hosts: all
+  become: yes
+  roles:
+    - backend
+    - frontend
+    - mongodb

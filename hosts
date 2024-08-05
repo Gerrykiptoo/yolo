@@ -1,0 +1,14 @@
+# Ansible Hosts File
+
+# Backend Group
+[backend]
+backend ansible_host=192.168.56.11
+
+# Frontend Group
+[frontend]
+frontend ansible_host=192.168.56.12
+
+# MongoDB Group
+[mongo]
+mongo ansible_host=192.168.56.13
+
