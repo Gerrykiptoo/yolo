@@ -6,18 +6,27 @@
       - docker-compose
     state: present
     update_cache: yes
+  become: yes
 
 - name: Start and enable Docker service
   systemd:
     name: docker
     state: started
     enabled: yes
+  become: yes
 
 - name: Add vagrant user to docker group
   user:
     name: vagrant
-    group: docker
+    groups: docker
     append: yes
+  become: yes
+
+- name: Create Docker network
+  docker_network:
+    name: Gerrys_network
+    state: present
+  become: yes
 
 - name: Build backend Docker image
   docker_image:
@@ -25,6 +34,7 @@
     build:
       path: "{{ playbook_dir }}/../../backend"
     state: present
+  become: yes
 
 - name: Run backend Docker container
   docker_container:
@@ -36,3 +46,4 @@
     networks:
       - name: Gerrys_network
   register: container_result
+  become: yes

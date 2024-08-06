@@ -1,8 +1,8 @@
-[frontend]
-frontend_host ansible_host=127.0.0.1 ansible_port=2222 ansible_user=vagrant ansible_ssh_private_key_file=/home/hp/yolo/.vagrant/machines/frontend/virtualbox/private_key
-
 [backend]
-backend_host ansible_host=127.0.0.1 ansible_port=2200 ansible_user=vagrant ansible_ssh_private_key_file=/home/hp/yolo/.vagrant/machines/backend/virtualbox/private_key
+backend_host ansible_host=127.0.0.1 ansible_port=2202 ansible_user=vagrant ansible_private_key_file=.vagrant/machines/backend/virtualbox/private_key
+
+[frontend]
+frontend_host ansible_host=127.0.0.1 ansible_port=2222 ansible_user=vagrant ansible_private_key_file=.vagrant/machines/frontend/virtualbox/private_key
 
 [mongo]
-mongo_host ansible_host=127.0.0.1 ansible_port=2201 ansible_user=vagrant ansible_ssh_private_key_file=/home/hp/yolo/.vagrant/machines/mongo/virtualbox/private_key
+mongo_host ansible_host=127.0.0.1 ansible_port=2201 ansible_user=vagrant ansible_private_key_file=.vagrant/machines/mongo/virtualbox/private_key

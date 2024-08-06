@@ -3,3 +3,4 @@ node_version: "18.x"
 frontend_port: 3000
 backend_port: 5000
 mongodb_version: "5.0"
+backend_image: "gerrykiptoo/backend:v1.0.0"

@@ -2,7 +2,7 @@
 - name: Provision Docker Containers
   hosts: all
   vars_files:
-    - ~/vagrant/vars/vars.yml
+    - /vagrant/vars/vars.yml
   roles:
     - backend
     - frontend
