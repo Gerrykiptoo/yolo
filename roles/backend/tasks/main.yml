@@ -32,8 +32,8 @@
   docker_image:
     name: "{{ backend_image }}"
     build:
-      path: "{{ playbook_dir }}/../../backend"
-    state: present
+      path: /path/to/your/backend/dockerfile
+      nocache: yes
   become: yes
 
 - name: Run backend Docker container

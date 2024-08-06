@@ -1,5 +1,15 @@
 ##  My Ecommerce Application Description
 This project is an e-commerce application developed with Node.js, Express API, and MongoDB, and containerized using Docker. Each part of the application—the backend API, frontend client, and MongoDB database—is packaged into separate containers. These containers act as independent microservices and communicate through a dedicated Docker Bridge network called Gerrys_network. This setup streamlines dependency management, enhances scalability, and ensures uniformity between development and production environments. Docker Compose manages the orchestration of these containers, making the build and deployment processes straightforward.
+
+## Table of content
+## Requirements
+Setup Instructions
+Running the Application
+Running with Docker
+Pushing Docker Images to Docker Hub
+Ansible Deployment
+Vagrant Configuration
+
 ## Requirements
 
 Make sure that you have the following installed:
@@ -72,3 +82,38 @@ docker tag backend-img:v1.0.0 gerrykiptoo/backend:v1.0.0
 docker push gerrykiptoo/frontend:v1.0.0
 
 docker push gerrykiptoo/backend:v1.0.0
+
+## Ansible Deployment
+
+## Playbook
+The Ansible playbook (playbook.yml) is used to provision Docker containers for the backend, frontend, and MongoDB services. It includes tasks from roles defined for each of these services.
+here is a clue of the playbook
+---
+- name: Provision Docker Containers
+  hosts: all
+  vars_files:
+    - /vagrant/vars/vars.yml
+  roles:
+    - backend
+    - frontend
+    - mongodb
+
+## Hosts File
+
+The hosts file specifies the SSH connection details for Ansible to connect to the Vagrant virtual machines for the backend, frontend, and MongoDB services.
+
+[backend]
+backend_host ansible_host=127.0.0.1 ansible_port=2202 ansible_user=vagrant ansible_private_key_file=.vagrant/machines/backend/virtualbox/private_key
+
+[frontend]
+frontend_host ansible_host=127.0.0.1 ansible_port=2222 ansible_user=vagrant ansible_private_key_file=.vagrant/machines/frontend/virtualbox/private_key
+
+[mongo]
+mongo_host ansible_host=127.0.0.1 ansible_port=2201 ansible_user=vagrant ansible_private_key_file=.vagrant/machines/mongo/virtualbox/private_key
+
+
+## Vagrant Configuration
+
+The Vagrantfile is configured to set up three VMs for the frontend, backend, and MongoDB services. Each VM has its ports forwarded and is provisioned using Ansible.
+
+
