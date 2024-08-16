@@ -636,14 +636,16 @@ Welcome to [1mUbuntu 18.04.6 LTS[0m!
 [[0;32m  OK  [0m] Started Docker Application Container Engine.
 [[0;32m  OK  [0m] Reached target Multi-User System.
          Starting Execute cloud user/final scripts...
-[[0;32m  OK  [0m] Reached target Graphical Interface.
+[533;32m  OK  [0m] Reached target Graphical Interface.
          Starting Update UTMP about System Runlevel Changes...
 [[0;32m  OK  [0m] Started Update UTMP about System Runlevel Changes.
-[   19.904439] cloud-init[1869]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'modules:final' at Tue, 06 Aug 2024 07:38:16 +0000. Up 19.70 seconds.
-[   19.905845] cloud-init[1869]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 finished at Tue, 06 Aug 2024 07:38:16 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 19.89 seconds
+[   19.904439] cloud-init[186[53389.363713] watchdog: BUG: soft lockup - CPU#0 stuck for 21s! [vmstats:1235]
+[53934.680065] INFO: rcu_sched detected stalls on CPUs/tasks:
+[541869]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 finished at Tue, 06 Aug 2024 07:38:16 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 19.89 seconds
 [[0;32m  OK  [0m] Started Execute cloud user/final scripts.
 [[0;32m  OK  [0m] Reached target Cloud-init target.
 
 Ubuntu 18.04.6 LTS ubuntu-bionic ttyS0
 
-ubuntu-bionic login: 
+ubuntu-bionic login: [49580.532392] watchdog: BUG: soft lockup - CPU#0 stuck for 24s! [watchdog/0:11]
+[
