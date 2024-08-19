@@ -9,7 +9,8 @@ Running with Docker
 Pushing Docker Images to Docker Hub
 Ansible Deployment
 Vagrant Configuration
-
+Google Cloud SDK (for Kubernetes deployment)
+Kubectl (for Kubernetes deployment)
 ## Requirements
 
 Make sure that you have the following installed:
@@ -25,6 +26,11 @@ Make sure that you have the following installed:
 
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
+- [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
+- [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
+
+- [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
  ## Setup Instructions
 
