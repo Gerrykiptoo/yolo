@@ -123,3 +123,20 @@ mongo_host ansible_host=127.0.0.1 ansible_port=2201 ansible_user=vagrant ansible
 The Vagrantfile is configured to set up three VMs for the frontend, backend, and MongoDB services. Each VM has its ports forwarded and is provisioned using Ansible.
 
 
+## Kubernetes Deployment
+
+1. Configure Kubernetes Cluster
+
+Ensure that you have a GKE cluster running and that your kubectl is 
+configured to communicate with the cluster.
+# Create a GKE cluster:
+using the commands bellow:
+
+gcloud container clusters create yolo-cluster --num-nodes=2 --zone=us-central1-a
+
+ 2. Configure kubectl to use the GKE cluster:
+ by using the command below
+
+gcloud container clusters get-credentials yolo-cluster --zone us-central1-a --project your-project-id
+
+
