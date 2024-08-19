@@ -140,3 +140,24 @@ gcloud container clusters create yolo-cluster --num-nodes=2 --zone=us-central1-a
 gcloud container clusters get-credentials yolo-cluster --zone us-central1-a --project your-project-id
 
 
+## Deploy Your Application
+
+ My Kubernetes manifests (for backend, frontend, and MongoDB) are stored in the manifest directory.
+
+
+# Deploy MongoDB:
+using the command below:
+
+kubectl apply -f manifest/mongo.yaml
+
+# Deploy the Backend:
+using the command below:
+kubectl apply -f manifest/backend.yaml
+
+# Deploy the Frontend:
+using the command below:
+kubectl apply -f manifest/frontend.yaml
+
+
+
+
