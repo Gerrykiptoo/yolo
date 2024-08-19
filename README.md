@@ -159,5 +159,20 @@ using the command below:
 kubectl apply -f manifest/frontend.yaml
 
 
+## Expose the Services
+Ensure that each of your YAML files includes service configurations. If using LoadBalancer, your services will automatically be exposed externally. You can check the services as follows:
+
+ # Check the status of your services:
+  use the command below:
+  kubectl get services
+  This will give you the external IP addresses or node ports where your services are accessible
+
+  # Access your application:
+
+For Frontend: I  Used  the external IP but one can also use  node port to access the frontend service.
+For Backend:  I  used  the external IP but one can also use  node port to access the backend service.
+
+
+
 
 
